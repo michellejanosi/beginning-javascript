@@ -1,0 +1,25 @@
+<!--
+Change the code of question 2, chapter 3 so that it's a function that takes as
+parameters the times table required and the values at which it should start and
+end. For example, you might try the 4 times table displayed starting with
+4 * 4 and ending at 4 * 9.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>12 Times Table</title>
+  </head>
+  <body>
+    <script>
+      function timesTable(table, start, end) {
+        for (; start <= end; start++) {
+          document.write(table + " * " + start + " = " + start * table + "<br>");
+        }
+      }
+
+      timesTable(4, 4, 9);
+    </script>
+  </body>
+</html>
