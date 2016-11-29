@@ -1,0 +1,35 @@
+<!--
+Modify the code from question 1 to request the times table to be displayed from
+the user; the code should continue to request and display times tables until the
+user enters -1. Also, do a check to make sure the user is entering a valid number;
+if the number is not valid, ask the user to renter it.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>12 Times Table</title>
+  </head>
+  <body>
+    <script>
+    function timesTable(table, start, end) {
+      for (; start <= end; start++) {
+        document.write(table + " * " + start + " = " + start * table + "<br />");
+      }
+    }
+
+    var table = prompt("Enter a times table");
+
+    if(table == -1) {
+      table = prompt("Please enter a valid positive number");
+    }
+
+    if(isNaN(table) == true) {
+      table = prompt("Please enter a valid number");
+    }
+
+    timesTable(table, 1, 12);
+    </script>
+  </body>
+</html>
